@@ -1,8 +1,8 @@
-package practice.impl;
+package practice1.impl;
 
 import java.time.LocalDate;
 
-import practice.Product;
+import practice1.Product;
 
 public class HotDrink extends Product {
     private int temp;

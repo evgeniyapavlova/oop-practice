@@ -1,4 +1,4 @@
-package practice.impl;
+package practice1.impl;
 
 public enum Package {
     PLASTIC("plastic"), GLASS("glass");

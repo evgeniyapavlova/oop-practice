@@ -1,9 +1,9 @@
-package practice.impl;
+package practice1.impl;
 
 import java.util.List;
 
-import practice.Product;
-import practice.VendingMachine;
+import practice1.Product;
+import practice1.VendingMachine;
 
 public class WaterVendingMachine extends VendingMachine {
 

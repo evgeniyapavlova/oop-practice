@@ -1,11 +1,11 @@
-package practice;
+package practice1;
 
 import java.time.LocalDate;
 import java.util.List;
 
 // import practice.impl.BottleOfWater;
-import practice.impl.HotDrink;
-import practice.impl.HotDrinkVendingMachine;
+import practice1.impl.HotDrink;
+import practice1.impl.HotDrinkVendingMachine;
 // import practice.impl.Package;
 // import practice.impl.WaterVendingMachine;
 

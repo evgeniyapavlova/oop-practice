@@ -1,9 +1,9 @@
-package practice.impl;
+package practice1.impl;
 
 import java.util.ArrayList;
 import java.util.List;
 
-import practice.VendingMachine;
+import practice1.VendingMachine;
 
 public class HotDrinkVendingMachine extends VendingMachine {
 
