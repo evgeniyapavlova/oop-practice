@@ -2,15 +2,9 @@ package practice3;
 
 import java.util.Comparator;
 
-public class StreamComparator implements Comparator<StudentGroup> {
-
+public class StreamComparator implements Comparator<Stream> {
     @Override
-    public int compare(StudentGroup g1, StudentGroup g2) {
-
-        String[] names1 = g1.students.toString().split(" ");
-        String[] names2 = g2.students.toString().split(" ");
-
-        return names1.length - names2.length;
+    public int compare(Stream g1, Stream g2) {
+        return g1.sgList.size() - g2.sgList.size();
     }
-
 }

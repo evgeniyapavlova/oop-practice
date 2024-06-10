@@ -2,11 +2,17 @@ package practice3;
 
 public class Student implements Comparable<Student> {
     public String name;
+    public static int idInner = 1;
     public int id;
 
-    public Student(String name, int id) {
+    public Student(String name) {
         this.name = name;
-        this.id = id;
+        this.id = idInner;
+        incrementStaticId();
+    }
+
+    private static void incrementStaticId() {
+        idInner++;
     }
 
     @Override
@@ -16,13 +22,6 @@ public class Student implements Comparable<Student> {
 
     @Override
     public int compareTo(Student o) {
-        // if (o.name.length() > this.name.length())
-        // return -1;
-        // else if (o.name.length() < this.name.length())
-        // return 1;
-        // else
-        // return 0;
-
         return this.name.length() - o.name.length();
     }
 }

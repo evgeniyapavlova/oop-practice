@@ -5,6 +5,15 @@ import java.util.Iterator;
 public class StudentGroup implements Iterable<Student> {
     public StringBuilder students = new StringBuilder();
 
+    public StudentGroup() {
+    }
+
+    public StudentGroup(String[] names) {
+        for (String name : names) {
+            students.append(new Student(name)).append(" ");
+        }
+    }
+
     public void addStudent(Student student) {
         students.append(student).append(" ");
     }

@@ -18,7 +18,7 @@ public class StudentGroupIterator
         int count = 0;
 
         for (String name : names) {
-            students[count] = new Student(name, count);
+            students[count] = new Student(name);
             count++;
         }
 

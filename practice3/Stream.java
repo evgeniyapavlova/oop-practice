@@ -1,13 +1,15 @@
 package practice3;
 
+import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;
 
-public class Stream extends StreamService implements Iterable<StudentGroup> {
+public class Stream implements Iterable<StudentGroup> {
     private int index = 0;
+    List<StudentGroup> sgList = new ArrayList<>();
 
     public Stream(List<StudentGroup> sgList) {
-        super(sgList);
+        this.sgList = sgList;
     }
 
     @Override
@@ -27,6 +29,6 @@ public class Stream extends StreamService implements Iterable<StudentGroup> {
 
     @Override
     public String toString() {
-        return sgList.toString();
+        return String.format("Amount of groups: %d | %s", sgList.size(), sgList.toString());
     }
 }
