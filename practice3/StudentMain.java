@@ -2,7 +2,6 @@ package practice3;
 
 import java.util.ArrayList;
 import java.util.Collections;
-import java.util.Comparator;
 import java.util.List;
 
 public class StudentMain {
@@ -25,11 +24,12 @@ public class StudentMain {
         // System.out.println(iterator.next());
         // }
 
-        for (Student student : stGroup) {
-            System.out.println(student);
-        }
+        // for (Student student : stGroup) {
+        // System.out.println(student);
+        // }
 
-        ArrayList<Student> arrayList = new ArrayList<>(List.of(student1, student2, student3, student4));
+        ArrayList<Student> arrayList = new ArrayList<>(List.of(student1, student2,
+                student3, student4));
 
         System.out.println(arrayList);
 
@@ -43,5 +43,8 @@ public class StudentMain {
 
         System.out.println(arrayList);
 
+        // Stream stream1 = new Stream(List.of(stGroup));
+
+        // System.out.println(stream1);
     }
 }
