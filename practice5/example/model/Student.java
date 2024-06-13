@@ -3,8 +3,11 @@ package practice5.example.model;
 public class Student extends User {
     int groupId;
 
-    public Student(int id, String name, String lastName, int groupId) {
-        super(id, name, lastName);
+    public Student(String name, String lastName) {
+        super(name, lastName);
+    }
+
+    public void setGroupId(int groupId) {
         this.groupId = groupId;
     }
 

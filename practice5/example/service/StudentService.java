@@ -6,24 +6,16 @@ import practice5.example.model.Student;
 import practice5.example.model.DB.DataBase;
 
 public class StudentService {
-    public Student createStudent(String name, String lastName, int groupId) {
-        int id;
+    public Student createStudent(String name, String lastName) {
 
-        int size = DataBase.studentsDB.size();
-        // id = size + 1
-        if (size == 0)
-            id = 1;
-        else
-            id = size + 1;
-
-        Student student = new Student(id, name, lastName, groupId);
-        DataBase.studentsDB.add(student);
+        Student student = new Student(name, lastName);
+        DataBase.addStudent(student);
 
         return student;
     }
 
     public Student getById(int id) throws Exception {
-        Student student = DataBase.studentsDB // list of students
+        Student student = DataBase.getStudentsDB() // list of students
                 .stream() // stream for calculating, analogue of 'for' loop
                 .filter(s -> s.getId() == id) // filter by condition
                 .findFirst() // return first occurence
@@ -37,6 +29,6 @@ public class StudentService {
     }
 
     public List<Student> getAllStudents() {
-        return DataBase.studentsDB;
+        return DataBase.getStudentsDB();
     }
 }

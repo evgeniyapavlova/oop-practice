@@ -6,13 +6,11 @@ import java.util.List;
 public class Teacher extends User {
     List<Integer> groups = new ArrayList<>();
 
-    public Teacher(int id, String name, String lastName) {
-        super(id, name, lastName);
-
+    public Teacher(String name, String lastName) {
+        super(name, lastName);
     }
 
-    public void addGroupId(int id) { // todo убрать в сервис
-
+    public void addGroupId(int id) {
         groups.add(id);
     }
 }

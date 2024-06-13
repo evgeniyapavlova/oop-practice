@@ -5,27 +5,27 @@ import java.util.Scanner;
 
 import practice5.example.controller.StudentController;
 import practice5.example.model.Student;
-import practice5.example.model.DB.DataBase;
 
 public class StudentView {
     private StudentController controller = new StudentController();
 
     public void start() {
-        DataBase.fillDB();
-
         Scanner scanner = new Scanner(System.in);
 
         while (true) {
             System.out.println("1 - Create a student");
             System.out.println("2 - Find a student by id");
             System.out.println("3 - Print all students info");
-            System.out.println("4 - Exit");
+            System.out.println("4 - Return to the main menu");
 
             switch (scanner.nextInt()) {
                 case 1 -> createStudent();
                 case 2 -> getById();
                 case 3 -> getAllStudents();
-                case 4 -> System.exit(0);
+                case 4 -> {
+                    System.out.println("Returning to main menu...");
+                    return;
+                }
                 default -> System.out.println("Operation is not supported");
             }
         }
@@ -41,10 +41,10 @@ public class StudentView {
         System.out.println("Input last name:");
         String lastName = scanner.nextLine();
 
-        System.out.println("Input Group ID:");
-        int groupId = scanner.nextInt();
-        Student student = controller.createStudent(name, lastName, groupId);
+        Student student = controller.createStudent(name, lastName);
+
         System.out.println(student);
+
         return student;
     }
 

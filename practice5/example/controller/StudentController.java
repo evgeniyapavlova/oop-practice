@@ -9,8 +9,8 @@ public class StudentController {
 
     StudentService studentService = new StudentService();
 
-    public Student createStudent(String name, String lastName, int groupId) {
-        return studentService.createStudent(name, lastName, groupId);
+    public Student createStudent(String name, String lastName) {
+        return studentService.createStudent(name, lastName);
     }
 
     public Student getById(int id) {
